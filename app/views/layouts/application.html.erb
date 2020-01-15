@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  
+
 
         <script src="https://kit.fontawesome.com/2f609438b2.js" crossorigin="anonymous"></script>
 
@@ -85,37 +85,37 @@
   </body>
 
 
-  <footer id="footer" class="footer-area section-padding">
+  <footer id="footer" class="footer-area ">
     <div class="container">
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
             <div class="widget">
               <% if user_signed_in? %>
-              <li>
+              <p>
                 <%= link_to "Sign out", destroy_user_session_path, method: :delete, style:"color:grey; font-size:10px;" %>
-              </li>
+              </p>
               <%else%>
-              <li>
+              <p>
                 <%= link_to "Sign in", new_user_session_path, style:"color:grey; font-size:10px;" %>
-              </li>
+              </p>
               <%end%>
 
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
             <ul class="footer-link">
-              <li><a href="#">Tracking</a></li>
+              <li><p><i class="far fa-paper-plane mr-1"></i>l.bramoulle@hotmail.fr</p></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
             <ul class="footer-link">
-              <li><a href="#">Payment Options</a></li>
+              <li><p><i class="fas fa-phone-alt mr-1"></i> 06 29 60 12 48</p></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
             <ul class="footer-link">
-              <li><a href="#">Payment Options</a></li>
+              <li><a href="https://www.linkedin.com/in/l%C3%A9a-bramoulle-55ba23158/" style="opacity:60%;"><i class="fab fa-linkedin-in mr-1"></i> Se connecter</a></li>
             </ul>
           </div>
 
@@ -126,12 +126,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="copyright-content mx-auto">
-              <span class="copyright">
+            <div class="copyright-content mx-auto text-center">
+              <span class="copyright " style="color:grey;">
                 ©
                 <script>
                   document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Léa.
+                </script>, made with <i class="fa fa-heart heart" ></i> by Léa.
               </span>
             </div>
           </div>
