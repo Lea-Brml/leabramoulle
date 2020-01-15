@@ -93,7 +93,8 @@
             <div class="widget">
               <% if user_signed_in? %>
               <p>
-                <%= link_to "Sign out", destroy_user_session_path, method: :delete, style:"color:grey; font-size:10px;" %>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete, style:"color:grey; font-size:10px; margin-right:8px;" %>
+                <%= link_to "Messages", contact_index_path, style:"color:grey; font-size:10px;" %>
               </p>
               <%else%>
               <p>
