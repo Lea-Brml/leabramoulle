@@ -10,14 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require main
  *= require bootstrap.min
- *= require line-icons
  *= require owl.carousel.min
  *= require owl.theme
  *= require animate
- *= require main
  *= require responsive
  *= require rotating-card
- *= require_tree .
- *= require_self
  */
