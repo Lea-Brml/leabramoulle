@@ -16,7 +16,7 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+    <nav class="navbar navbar-expand-md bg-white fixed-top scrolling-navbar">
       <div class="container">
 
         <a href="index.html" class="navbar-brand"><%= image_tag 'profile.png', style:"width:10%;"%></a>
@@ -41,9 +41,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pt-2" href="#pricing" style="font-size:12px;">
-                Formations
-              </a>
+              <%= link_to "Formations", root_path(anchor: 'pricing'), style:" font-size:12px;", class:"nav-link pt-2" %>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#testimonial">
@@ -80,6 +78,7 @@
       </div>
     </div>
     <%end%>
+
 
     <%= yield %>
   </body>
