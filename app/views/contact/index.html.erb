@@ -1,0 +1,23 @@
+
+
+<section id="services" class="section-padding bg-white" style="height:60rem;">
+  <div class="container">
+
+
+
+        <% @messages.each do |t| %>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">  <%= t.subject %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">  <%= t.name %></h6>
+            <h6 class="card-subtitle mb-2 text-muted">    <%= t.email %></h6>
+            <p class="card-text">  <%== t.message %> </p>
+            <a href="#" class="card-link">Supprimer</a>
+            <a href="#" class="card-link">Marquer comme non lu</a>
+          </div>
+        </div>
+        <%end%>
+
+
+  </div>
+</section>

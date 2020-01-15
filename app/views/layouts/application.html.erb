@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MiniSite2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+        <script src="https://kit.fontawesome.com/2f609438b2.js" crossorigin="anonymous"></script>
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+      <div class="container">
+
+        <a href="index.html" class="navbar-brand"><%= image_tag 'profile.png', style:"width:10%;"%></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="lni-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix ">
+            <li class="nav-item active">
+              <a class="nav-link " href="#hero-area">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">
+                Compétences
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pt-2" href="#team" style="font-size:12px;">
+                Expériences
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pt-2" href="#pricing" style="font-size:12px;">
+                Formations
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">
+                Réalisations
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <% if flash[:danger].present? %>
+    <div id="error_explanation bg-white" style="margin-top:2rem;">
+      <div class="position alert alert-danger alert-dismissible fade show" role="alert">
+        <strong><%= flash[:danger] %></strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    <%elsif flash[:success].present?%>
+    <div id="sucess_explanation bg-white" style="margin-top:2rem;">
+      <div class="position alert alert-success alert-dismissible fade show" role="alert">
+        <strong><%= flash[:success] %></strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    <%end%>
+
+    <%= yield %>
+  </body>
+
+
+  <footer id="footer" class="footer-area section-padding">
+    <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+            <div class="widget">
+              <% if user_signed_in? %>
+              <li>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete, style:"color:grey; font-size:10px;" %>
+              </li>
+              <%else%>
+              <li>
+                <%= link_to "Sign in", new_user_session_path, style:"color:grey; font-size:10px;" %>
+              </li>
+              <%end%>
+
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <ul class="footer-link">
+              <li><a href="#">Tracking</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <ul class="footer-link">
+              <li><a href="#">Payment Options</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <ul class="footer-link">
+              <li><a href="#">Payment Options</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright-content mx-auto">
+              <span class="copyright">
+                ©
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>, made with <i class="fa fa-heart heart"></i> by Léa.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</html>
