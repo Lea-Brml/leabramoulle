@@ -21,20 +21,20 @@ filter
 
 
 
-    <div id="hero-area" class="hero-area-bg">
+    <div id="hero-area" class="hero-area-bg" style="background-image: url(asset-path('hero-area.svg'));">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div class="contents mt-4 pt-4">
               <h2 class="head-title">Mon CV en ligne</h2>
               <p> Diplômée d'un Master en Marketing et Data Mining, et passionnnée par le domaine du digital, je suis à la recherche d'une opportunité dans les domaines du web marketing et de la communiation digitale</p>
               <div class="header-button">
                 <a href="#contact" rel="nofollow" class="btn btn-common" style="  border-radius:20px;">Me Contacter</i></a>
-                <a href="https://uideck.com/products/fusion-app-business-saas-product-landing-page-template/" rel="nofollow" class="btn btn-border video-popup" style="  border-radius:20px;">Mon CV</i></a>
+                <%= link_to "Mon CV", asset_path("BRAMOULLE-LEA-CV.pdf"), class:"btn btn-border video-popup", style:"border-radius:20px;" %>
               </div>
             </div>
           </div>
-          <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div class="intro-img">
               <%=image_tag 'intro.png', class:"img-fluid" %>
             </div>
@@ -376,7 +376,7 @@ filter
             </div>
             <div class="box-item wow fadeInLeft py-4" data-wow-delay="0.6s">
               <span class="icon">
-                <span class="label label-info font-weight-bold" style="border-radius:30px;opacity:60%;">2014</span>
+                <span class="label label-info font-weight-bold" style="border-radius:30px;opacity:60%;">2017</span>
               </span>
               <div class="text">
                 <h4>Licence d'Économie</h4>
@@ -401,7 +401,7 @@ filter
             </div>
             <div class="box-item wow fadeInRight py-4" data-wow-delay="0.6s">
               <span class="icon">
-                <span class="label label-info font-weight-bold" style="border-radius:30px;opacity:60%;">2017</span>
+                <span class="label label-info font-weight-bold" style="border-radius:30px;opacity:60%;">2014</span>
               </span>
               <div class="text text-left">
                 <h4>Baccalauréat Scientifique</h4>
@@ -458,17 +458,6 @@ filter
                   <p >Site qui ressence les meilleurs évènements dans ta ville.</p>
                 </div>
                   <%= image_tag 'eventbrite.png' , style:"width:70%;", class:"mx-auto mt-2"%>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-item">
-                <div class="info">
-                  <h2><a href="#">The Gossip Project</a></h2>
-                </div>
-                <div class="content">
-                  <p >Site de partage des gossips.<br> Xoxo.</p>
-                </div>
-                  <%= image_tag 'laptop.png' , style:"width:70%;", class:"mx-auto mt-2"%>
               </div>
             </div>
           </div>
